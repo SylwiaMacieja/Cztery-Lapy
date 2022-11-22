@@ -1,5 +1,5 @@
 import React from "react";
-import {Header} from "../HomeHeader/Header";
+import {Menu} from "../Menu/Menu";
 import {Hero} from "../Hero/Hero";
 import {ThreeColumns} from "../ThreeColumns/ThreeColumns";
 import {Steps} from "../Steps/Steps";
@@ -9,16 +9,17 @@ import {Form} from "../Form/Form.jsx";
 
 
 
+
 export function Home () {
     return (
-        <div>
-            <Header />
+        <>
+            <Menu />
             <Hero />
             <ThreeColumns />
             <Steps />
             <About />
             <ForWho />
             <Form />
-        </div>
+        </>
     )
 }

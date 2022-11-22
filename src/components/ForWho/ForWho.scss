@@ -21,102 +21,139 @@
 
 
   &__img1 {
-    background-color: black;
+    background: url("./assets/Shelter1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    border: 2px solid white;
-  }
-  &__button1{
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    font-family: $headingFont;
-    font-size: 1rem;
-    font-weight: 200;
-    color: $mainColorLight;
-    text-decoration: none;
-    border-top: 0.01em solid $mainColorLight;
-    padding: 0.3em;
-    text-align: center;
-    width: 8em;
+    z-index: 1;
+
+    &::before {
+      content: "Cztery łapy";
+      font-weight: 200;
+      color: $mainColorDark;
+      width: 100%;
+      height: 4rem;
+      background-color: $contrastColorOpacityDark;
+      z-index: 2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-top: 1rem;
+    }
 
     &:hover {
-      transform: scale(1.1);
+      &::before {
+        transition: 0.75s ease-in;
+        content: "Cztery łapy";
+        height: 50%;
+        background-color: $contrastColorOpacityDark;
+        z-index: 3;
+
+      }
+
+
     }
+
   }
+
+
 
 
   &__img2 {
-    height: 70vh;
-    background-color: black;
+    background: url("./assets/Shelter4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    border: 2px solid white;
-  }
-  &__button2{
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    font-family: $headingFont;
-    font-size: 1rem;
-    font-weight: 200;
-    color: $mainColorLight;
-    text-decoration: none;
-    border-top: 0.01em solid $mainColorLight;
-    padding: 0.3em;
-    text-align: center;
-    width: 8em;
+
+    &::before {
+      content: "Cztery łapy";
+      font-weight: 200;
+      color: $mainColorDark;
+      width: 100%;
+      height: 4rem;
+      background-color: $contrastColorOpacityDark;
+      z-index: 2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-top: 1rem;
+    }
 
     &:hover {
-      transform: scale(1.1);
+      &::before {
+        transition: 0.75s ease-in;
+        content: "Cztery łapy";
+        height: 50%;
+        background-color: $contrastColorOpacityDark;
+        z-index: 3;
+
+      }
     }
   }
 
-  &__img3 {
-    height: 70vh;
-    background-color: black;
-    position: relative;
-    border: 2px solid white;
-  }
-  &__button3{
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    font-family: $headingFont;
-    font-size: 1rem;
-    font-weight: 200;
-    color: $mainColorLight;
-    text-decoration: none;
-    border-top: 0.01em solid $mainColorLight;
-    padding: 0.3em;
-    text-align: center;
-    width: 8em;
 
-    &:hover {
-      transform: scale(1.1);
+    &__img3 {
+      background: url("./assets/Shelter3.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+
+      &::before {
+        content: "Cztery łapy";
+        font-weight: 200;
+        color: $mainColorDark;
+        width: 100%;
+        height: 4rem;
+        background-color: $contrastColorOpacityDark;
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-top: 1rem;
+      }
+
+      &:hover {
+        &::before {
+          transition: 0.75s ease-in;
+          content: "Cztery łapy";
+          height: 50%;
+          background-color: $contrastColorOpacityDark;
+          z-index: 3;
+
+        }
+      }
     }
-  }
-  &__img4 {
-    height: 70vh;
-    background-color: black;
-    position: relative;
-    border: 2px solid white;
-  }
-  &__button4{
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    font-family: $headingFont;
-    font-size: 1rem;
-    font-weight: 200;
-    color: $mainColorLight;
-    text-decoration: none;
-    border-top: 0.01em solid $mainColorLight;
-    padding: 0.3em;
-    text-align: center;
-    width: 8em;
 
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+    &__img4 {
+      background: url("./assets/Shelter2.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
 
+      &::before {
+        content: "Cztery łapy";
+        font-weight: 200;
+        color: $mainColorDark;
+        width: 100%;
+        height: 4rem;
+        background-color: $contrastColorOpacityDark;
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-top: 1rem;
+      }
+
+      &:hover {
+        &::before {
+          transition: 0.75s ease-in;
+          content: "Cztery łapy";
+          height: 50%;
+          background-color: $contrastColorOpacityDark;
+          z-index: 3;
 }
+}
+}}
+
+
+

@@ -6,7 +6,7 @@ export function Hero () {
     return (
         <div className='Hero'>
             <div className='Hero__info'>
-                <h1 className='Hero__heading'>I Ty możesz zrobić coś dobrego!</h1>
+                <h1 className='Hero__heading'>I Ty możesz <br/>pomóc</h1>
                 <p className='Hero__description'>Przekaż karmę lub środki pieniężne na wybrane schronisko</p>
             </div>
                 <div className="Hero__container">

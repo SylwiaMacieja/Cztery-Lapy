@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 
 export function Menu() {
     return (
+
 <div className="Menu__container">
     <div className="Menu__container__left">
         <div className="Menu__hamburger"></div>
