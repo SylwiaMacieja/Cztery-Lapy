@@ -1,0 +1,122 @@
+
+.ForWho {
+
+  height: 80vh;
+  text-align: center;
+  font-family: $headingFont;
+  font-weight: 100;
+  font-size: 2rem;
+  color: $mainColorLight;
+  letter-spacing: 0.2rem;
+  margin-bottom: 8rem;
+
+
+  &__container {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 2rem 0;
+    z-index: 1;
+  }
+
+
+  &__img1 {
+    background-color: black;
+    position: relative;
+    border: 2px solid white;
+  }
+  &__button1{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-family: $headingFont;
+    font-size: 1rem;
+    font-weight: 200;
+    color: $mainColorLight;
+    text-decoration: none;
+    border-top: 0.01em solid $mainColorLight;
+    padding: 0.3em;
+    text-align: center;
+    width: 8em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+
+  &__img2 {
+    height: 70vh;
+    background-color: black;
+    position: relative;
+    border: 2px solid white;
+  }
+  &__button2{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-family: $headingFont;
+    font-size: 1rem;
+    font-weight: 200;
+    color: $mainColorLight;
+    text-decoration: none;
+    border-top: 0.01em solid $mainColorLight;
+    padding: 0.3em;
+    text-align: center;
+    width: 8em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__img3 {
+    height: 70vh;
+    background-color: black;
+    position: relative;
+    border: 2px solid white;
+  }
+  &__button3{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-family: $headingFont;
+    font-size: 1rem;
+    font-weight: 200;
+    color: $mainColorLight;
+    text-decoration: none;
+    border-top: 0.01em solid $mainColorLight;
+    padding: 0.3em;
+    text-align: center;
+    width: 8em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__img4 {
+    height: 70vh;
+    background-color: black;
+    position: relative;
+    border: 2px solid white;
+  }
+  &__button4{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-family: $headingFont;
+    font-size: 1rem;
+    font-weight: 200;
+    color: $mainColorLight;
+    text-decoration: none;
+    border-top: 0.01em solid $mainColorLight;
+    padding: 0.3em;
+    text-align: center;
+    width: 8em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+}

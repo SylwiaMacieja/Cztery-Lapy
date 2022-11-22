@@ -1,0 +1,128 @@
+.Container {
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: $mainColorDark;
+
+}
+
+.Form__header {
+  margin-top: 4rem;
+}
+
+.Form {
+  //width: 100%;
+  //height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10rem;
+  margin-left: 10rem;
+
+  &__title {
+    font-family: $headingFont;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: $mainColorLight;
+    text-align: center;
+    padding-top: 4rem;
+
+  }
+
+  &__description {
+    font-family: $paragraphFont;
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: $mainColorLight;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 2em;
+  }
+
+  &__info {
+    font-family: $headingFont;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    color: $mainColorLight;
+    margin-left: 12.5em;
+    margin-right: 10em;
+    margin-top: 2em;
+  }
+
+
+  &__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 4em;
+    //margin-right: 20em;
+    //margin-left: 20em;
+
+  }
+
+  &__questions {
+    display: flex;
+    flex-direction: column;
+    //margin-right: 20em;
+    //margin-left: 20em;
+
+  }
+
+  &__button {
+    //margin-left: 24em;
+    margin-top: 1em;
+    width: 20em;
+    font-family: $headingFont;
+    font-size: 1rem;
+    color: $mainColorLight;
+    background: $contrastColorOpacity;
+    border: 0.2rem solid $contrastColorOpacityDark;
+    padding: 0.3em;
+    letter-spacing: 0.1em;
+    margin-bottom: 1em;
+
+    &:hover {
+      color: $mainColorDark;
+      font-weight: 700;
+      background: $contrastColor;
+    }
+  }
+
+  &__input {
+    width: 40em;
+    border: $mainColorLight;
+
+    &:focus {
+      border: 0.2em solid $contrastColor;
+    }
+  }
+
+  &__input__q {
+    margin-top: 1em;
+    border: $mainColorDark;
+  }
+
+  &__error {
+    margin-top: 1em;
+    margin-left: 15em;
+    font-family: $headingFont;
+    color: $mainColorDark;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 2em;
+
+  }
+}
+
+::-webkit-input-placeholder {
+  font-family: $paragraphFont;
+  padding-top: 0.5em;
+}
+

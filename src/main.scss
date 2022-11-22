@@ -1,3 +1,12 @@
 @import "../src/scss/fonts&colors.scss";
-@import "../src/components/Menu/Menu.scss";
+@import "src/components/Menu/Menu.scss";
 @import "src/components/Hero/Hero.scss";
+@import "src/components/ThreeColumns/ThreeColumns.scss";
+@import "src/components/About/About.scss";
+@import "src/components/Steps/Steps.scss";
+@import "src/components/ForWho/ForWho.scss";
+@import "src/components/Form/Form.scss";
+
+body {
+  background-color: $mainColorDark;
+}

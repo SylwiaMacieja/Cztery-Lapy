@@ -1,0 +1,51 @@
+.Steps {
+  background-color: $mainColorLight;
+  padding: 2rem;
+
+  &__title {
+    text-align: center;
+    font-family: $headingFont;
+    font-weight: 200;
+    font-size: 2rem;
+    color: $mainColorDark;
+    letter-spacing: 0.2rem;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 6rem;
+  }
+
+  &__stuff,
+  &__package,
+  &__choice,
+  &__delivery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__img {
+    height: 10vh;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+
+
+  }
+
+  &__description {
+    font-family: $paragraphFont;
+    font-size: 1rem;
+    color: $mainColorDark;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1rem;
+
+  }
+}
