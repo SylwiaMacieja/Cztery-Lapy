@@ -1,0 +1,168 @@
+.Menu__container {
+  width: 100%;
+  height: 5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-basis: 33%;
+  justify-content: space-between;
+  position: fixed;
+  background: linear-gradient(to bottom, $mainColorDark, $mainColorMiddle);
+  box-shadow: 0.2rem 0 0.2rem 0.2rem $mainColorLight;
+
+  &:hover {
+    .Menu__left,
+    .Menu__right {
+      transition: 0.3s ease-in;
+      visibility: visible;
+    }
+
+    .Menu {
+
+      &__hamburger {
+        &::after {
+          width: 0.5rem;
+          transition: 0.5s ease-in;
+        }
+        &::before {
+          width: 1rem;
+          transition: 0.5s ease-in;
+        }
+      }
+    }
+  }
+
+  .Menu__container__left {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+
+
+    li:first-of-type,
+    li:nth-of-type(2),
+    li:nth-of-type(3),
+    li:nth-of-type(4) {
+      &:hover {
+
+        padding-top: 1.8rem;
+        padding-bottom: 1.9rem;
+        border-top: 0.25rem solid $contrastColor;
+      }
+    }
+  }
+
+  .Menu__container__right {
+
+    margin-right: 1.5rem;
+  }
+
+  .Menu {
+    &__hamburger {
+      width: 1.5rem;
+      height: 0.8rem;
+      border-top: 0.2rem solid $mainColorLight;
+      position: relative;
+      margin-top: 2rem;
+      margin-right: 1rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        width: 1.5rem;
+        height: 0.8rem;
+        border-bottom: 0.2rem solid $mainColorLight;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -65%;
+        width: 1.5rem;
+        height: 0.8rem;
+        border-bottom: 0.2rem solid $mainColorLight;
+
+      }
+    }
+
+    &__left {
+      visibility: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.3rem;
+
+
+      &__item {
+        height: 4rem;
+        text-decoration: none;
+        font-family: $headingFont;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: $mainColorLight;
+        text-transform: uppercase;
+        text-align: center;
+
+
+
+      }
+    }
+
+    &__container__right {
+      padding-right: 1rem;
+    }
+
+    &__right {
+      visibility: hidden;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      letter-spacing: 0.1rem;
+
+
+      &__item {
+        text-decoration: none;
+        font-family: $headingFont;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: $mainColorLight;
+        text-transform: uppercase;
+        padding: 0 1rem;
+
+      }
+
+      li:first-of-type {
+        &:hover {
+          padding-top: 1.8rem;
+          padding-bottom: 1.9rem;
+          border-top: 0.25rem solid $contrastColor;
+        }
+      }
+
+      li:last-of-type {
+        border: 0.1rem solid $contrastColor;
+        &:hover {
+          transform: scale(1.2);
+          background-color: $contrastColor;
+        }
+      }
+    }
+  }
+
+  .Menu__logo {
+    margin-top: 1rem;
+    font-family: $logoFont;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $contrastColor;
+  }
+}
+
+
+
+
+
+
+

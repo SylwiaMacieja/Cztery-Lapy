@@ -1,0 +1,54 @@
+
+.Hero {
+  width: 100%;
+  height: 100vh;
+  background-color: $mainColorDark;
+
+
+  &__info {
+    width: 100%;
+    text-align: center;
+    font-family: $headingFont;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: $mainColorLight;
+    letter-spacing: 0.2rem;
+    padding: 1rem;
+
+
+
+  }
+
+  &__container {
+    width: 100%;
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:1rem;
+    font-family: $headingFont;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: $mainColorLight;
+    border: 0.2rem solid $contrastColor;
+    background-color: $contrastColorOpacity;
+
+    margin-bottom: 6rem;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+}
+p:first-of-type {
+  padding-top: 12rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
