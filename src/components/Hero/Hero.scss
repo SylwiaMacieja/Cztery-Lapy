@@ -1,20 +1,14 @@
 
 .Hero {
-  width: 100vw;
-  height: 70vh;
+  height: 100vh;
   background: url("./assets/HeroDog.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-  }
 
   &__heading {
 
@@ -26,6 +20,7 @@
     font-weight: 100;
     color: $mainColorMiddle;
     letter-spacing: 0.2rem;
+    padding-bottom: 2rem;
 
   }
 
@@ -37,16 +32,7 @@
     font-size: 1rem;
     color: $contrastColor;
     letter-spacing: 0.2rem;
-    padding: 1rem;
-  }
-
-
-  &__container {
-    width: 100%;
-    margin: 4rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    padding-bottom: 2rem;
   }
 
 
@@ -64,11 +50,11 @@
     color: $mainColorLight;
     border: 0.2rem solid $contrastColor;
     background-color: $contrastColorOpacity;
+    margin-top: 2rem;
 
 
-    &:hover {
-      opacity: 1;
-    }
+
+
 
   }
 }

@@ -15,18 +15,12 @@ const validate = form => {
     } else if (form.surname.length <= 2) {
         return 'Nazwisko musi mieć więcej niż dwa znaki'
     }
-    if(!form.phone) {
-        return 'Telefon jest wymagany'
-    }  else if (form.phone.length <= 8) {
-        return 'Telefon musi mieć 9 znaków'
-    }  else if (form.phone.length > 9) {
-        return 'Telefon musi mieć 9 znaków'
+
+    if(!form.email) {
+        return'Email jest wymagany'
+    } else if (!form.email.includes('@')) {
+        return 'Zły format email'
     }
-    // if(!form.email) {
-    //     return'Email jest wymagany'
-    // } else if (!form.email.includes('@')) {
-    //     return 'Zły format email'
-    // }
     if(!form.q1) {
         return 'Treść wiadomości jest wymagana'
     }
@@ -39,8 +33,7 @@ export function Form () {
     const [form, setForm] = useState({
         name: '',
         surname:'',
-        phone: '',
-        // email: '',
+        email: '',
         q1: '',
 
     });
@@ -64,7 +57,7 @@ export function Form () {
         alert(
             `Podano następujące dane:
         Imie i nazwisko: ${form.name} ${form.surname}
-        Telefon: ${form.phone}
+        Email: ${form.email}
         Pytanie 1: ${form.q1}`
         );
         console.log('submitted', form);
@@ -74,31 +67,21 @@ export function Form () {
 
 
     return (
-        <div className='Container'>
-            <div className='Form__header'>
-                <h1 className='Form__title'>Masz pytania? SKontaktuj się z nami!</h1>
-                <p className='Form__description'>Odpowiemy na Twoja wiadomośc w przeciągu 24h</p>
-            </div>
+        <div className='Container' id='form'>
+
+            <h1 className='Form__title'>Masz pytania? </h1>
+
 
             <form className='Form' onSubmit={handleSubmit}>
-
-                <div className='Form__contact'>
-                    <textarea className='Form__input' type='text' name='name' placeholder='Imię' onChange={update}/>
-
-                    <textarea className='Form__input' type='text' name='surname' placeholder='Nazwisko'
+                    <input className='Form__input' type='text' name='name' placeholder='Imię' onChange={update}/>
+                    <input className='Form__input' type='text' name='surname' placeholder='Nazwisko'
                               onChange={update}/>
-                    {/*<label className='Form__label'>Nazwisko</label>*/}
-
-                    <textarea className='Form__input' type='text' name='phone' placeholder='Telefon: xxx xxx xxx'
+                    <input className='Form__input' type='text' name='email' placeholder='Email'
                               onChange={update}/>
-                    {/*<label className='Form__label'>Email</label>*/}
-                </div>
 
-                <div className='Form__questions'>
-                        <textarea className='Form__input__q' type='text' placeholder='Pytanie 1' name='q1'
+                    <textarea className='Form__input__q' type='text' placeholder='Pytanie 1' name='q1'
                                   onChange={update}/>
 
-                </div>
 
                 <button  className="Form__button" type='submit'>WYŚLIJ</button>
 

@@ -1,23 +1,17 @@
 .Container {
-  width: 100%;
-  height: 80vh;
-  margin: 0 auto;
-  background-color: $mainColorDark;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 4rem;
+  gap: 2rem;
 }
-
-.Form__header {
-  margin-top: 4rem;
-}
-
 .Form {
-  //width: 100%;
-  //height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 10rem;
-  margin-left: 10rem;
+  align-items: center;
+
+
 
   &__title {
     font-family: $headingFont;
@@ -26,53 +20,14 @@
     letter-spacing: 0.3em;
     color: $mainColorLight;
     text-align: center;
-    padding-top: 4rem;
+    line-height: 2rem;
+    padding: 2rem;
+
 
   }
 
-  &__description {
-    font-family: $paragraphFont;
-    font-size: 1rem;
-    text-align: justify;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    color: $mainColorLight;
-    margin-left: 10em;
-    margin-right: 10em;
-    margin-top: 2em;
-  }
-
-  &__info {
-    font-family: $headingFont;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    line-height: 1.2em;
-    color: $mainColorLight;
-    margin-left: 12.5em;
-    margin-right: 10em;
-    margin-top: 2em;
-  }
 
 
-  &__contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1em;
-    margin-top: 4em;
-    //margin-right: 20em;
-    //margin-left: 20em;
-
-  }
-
-  &__questions {
-    display: flex;
-    flex-direction: column;
-    //margin-right: 20em;
-    //margin-left: 20em;
-
-  }
 
   &__button {
     //margin-left: 24em;
@@ -95,8 +50,13 @@
   }
 
   &__input {
-    width: 40em;
-    border: $mainColorLight;
+    appearance: none;
+    width: 30rem;
+    border: none;
+    border-bottom: .1rem solid $mainColorLight;
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: $mainColorDark;
 
     &:focus {
       border: 0.2em solid $contrastColor;
@@ -104,8 +64,13 @@
   }
 
   &__input__q {
-    margin-top: 1em;
-    border: $mainColorDark;
+    appearance: none;
+    width: 30rem;
+    border: none;
+    border-bottom: .1rem solid $mainColorLight;
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: $mainColorDark;
   }
 
   &__error {
@@ -122,7 +87,8 @@
 }
 
 ::-webkit-input-placeholder {
-  font-family: $paragraphFont;
+  font-family: $headingFont;
+  text-transform: uppercase;
   padding-top: 0.5em;
 }
 

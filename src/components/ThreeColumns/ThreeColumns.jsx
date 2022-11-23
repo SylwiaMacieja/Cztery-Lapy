@@ -2,7 +2,7 @@ import React from "react";
 
 export function ThreeColumns () {
     return (
-        <section className="Info__container">
+        <section className="Info__container" >
             <div className="Info__weight">
                 <div className='Info__numbers'>12773</div>
                 <div className='Info__title'>kiligramów karmy</div>

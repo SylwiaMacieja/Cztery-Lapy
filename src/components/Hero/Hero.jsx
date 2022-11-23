@@ -4,15 +4,12 @@ import {NavLink} from "react-router-dom";
 
 export function Hero () {
     return (
-        <div className='Hero'>
-            <div className='Hero__info'>
+        <div className='Hero' id='hero'>
                 <h1 className='Hero__heading'>I Ty możesz <br/>pomóc</h1>
                 <p className='Hero__description'>Przekaż karmę lub środki pieniężne na wybrane schronisko</p>
-            </div>
-                <div className="Hero__container">
-                    <NavLink className="Hero__btn" to="/providedogfood">Przekaż karmę</NavLink>
-                    <NavLink className="Hero__btn"to="/organize">Zorganizuj zbiórkę</NavLink>
-                </div>
+
+            <NavLink className="Hero__btn" to="/providedogfood">Przekaż karmę</NavLink>
+
         </div>
     )
 }

@@ -8,7 +8,8 @@
   font-size: 2rem;
   color: $mainColorLight;
   letter-spacing: 0.2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
+  margin-top: 12rem;
 
 
   &__container {
@@ -44,10 +45,14 @@
     &:hover {
       &::before {
         transition: 0.75s ease-in;
-        content: "Cztery łapy";
-        height: 50%;
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
+        height: 40%;
         background-color: $contrastColorOpacityDark;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
         z-index: 3;
+        padding-top: 4rem;
 
       }
 
@@ -82,10 +87,14 @@
     &:hover {
       &::before {
         transition: 0.75s ease-in;
-        content: "Cztery łapy";
-        height: 50%;
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
+        height: 40%;
         background-color: $contrastColorOpacityDark;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
         z-index: 3;
+        padding-top: 4rem;
 
       }
     }
@@ -115,10 +124,14 @@
       &:hover {
         &::before {
           transition: 0.75s ease-in;
-          content: "Cztery łapy";
-          height: 50%;
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
+          height: 40%;
           background-color: $contrastColorOpacityDark;
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: center;
           z-index: 3;
+          padding-top: 4rem;
 
         }
       }
@@ -147,10 +160,14 @@
       &:hover {
         &::before {
           transition: 0.75s ease-in;
-          content: "Cztery łapy";
-          height: 50%;
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
+          height: 40%;
           background-color: $contrastColorOpacityDark;
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: center;
           z-index: 3;
+          padding-top: 4rem;
 }
 }
 }}

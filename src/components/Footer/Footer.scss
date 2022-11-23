@@ -1,0 +1,30 @@
+.Footer {
+  height: 4rem;
+  background-color: $contrastColorOpacityDark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  &__icon1 {
+    background: url("./assets/Facebook.svg");
+  }
+  &__icon2 {
+    background: url("./assets/Instagram.svg");
+  }
+
+  &__icon1,
+  &__icon2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__copyright {
+    font-family: $headingFont;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+  }
+}
+

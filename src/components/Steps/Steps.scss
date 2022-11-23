@@ -1,5 +1,4 @@
 .Steps {
-  background-color: $mainColorLight;
   padding: 2rem;
 
   &__title {
@@ -7,17 +6,21 @@
     font-family: $headingFont;
     font-weight: 200;
     font-size: 2rem;
-    color: $mainColorDark;
+    color: $mainColorLight;
     letter-spacing: 0.2rem;
     padding: 2rem;
     text-transform: uppercase;
+    border-bottom: .1rem solid $mainColorLight;
+    margin: 0 8rem;
   }
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    padding: 2rem 6rem;
+    padding: 1rem 1rem;
+    margin: 2rem 20rem;
+
   }
 
   &__stuff,
@@ -31,18 +34,33 @@
 
   }
 
-  &__img {
-    height: 10vh;
-    border: 1px solid black;
-    margin-bottom: 1rem;
-
-
+  &__img1{
+    background: url("./assets/Step1.svg");
   }
+
+  &__img2{
+    background: url("./assets/Step2.svg");
+  }
+  &__img3{
+    background: url("./assets/Step3.svg");
+  }
+
+
+  &__img1,
+  &__img2,
+  &__img3{
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 
   &__description {
     font-family: $paragraphFont;
     font-size: 1rem;
-    color: $mainColorDark;
+    color: $mainColorLight;
     font-weight: 300;
     text-align: center;
     margin-bottom: 1rem;
