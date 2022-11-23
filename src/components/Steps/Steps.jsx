@@ -8,7 +8,7 @@ export function Steps () {
 
                 <div className="Steps__package">
                     <div className='Steps__img1'></div>
-                    <div className='Steps__description'>Spakuj karmę</div>
+                    <div className='Steps__description'>Spakuj karmę lub akcesoria</div>
                 </div>
                 <div className="Steps__choice">
                     <div className='Steps__img2'></div>
@@ -16,7 +16,7 @@ export function Steps () {
                 </div>
                 <div className="Steps__delivery">
                     <div className='Steps__img3'></div>
-                    <div className='Steps__description'>Zamów kuriera</div>
+                    <div className='Steps__description'>Zamów kuriera w dowolne miejsce</div>
                 </div>
             </div>
 

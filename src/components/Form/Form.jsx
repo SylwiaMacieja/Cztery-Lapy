@@ -69,7 +69,7 @@ export function Form () {
     return (
         <div className='Container' id='form'>
 
-            <h1 className='Form__title'>Masz pytania? </h1>
+            <h1 className='Form__title'>Masz pytania?    {error && (<div className='Form__error'>{error}</div>)} </h1>
 
 
             <form className='Form' onSubmit={handleSubmit}>
@@ -84,9 +84,9 @@ export function Form () {
 
 
                 <button  className="Form__button" type='submit'>WYŚLIJ</button>
-
             </form>
-            {error && (<div className='Form__error'>{error}</div>)}
         </div>
+
+
     )
 }
