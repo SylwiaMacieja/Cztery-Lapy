@@ -1,6 +1,4 @@
-
 .ForWho {
-
   height: 80vh;
   text-align: center;
   font-family: $headingFont;
@@ -11,7 +9,6 @@
   margin-bottom: 4rem;
   margin-top: 12rem;
 
-
   &__container {
     height: 70vh;
     display: grid;
@@ -20,157 +17,105 @@
     z-index: 1;
   }
 
-
-  &__img1 {
-    background: url("./assets/Shelter1.jpeg");
+  @mixin img {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
+  }
+
+  @mixin imgBefore {
+    font-weight: 200;
+    color: $mainColorDark;
+    width: 100%;
+    height: 4rem;
+    background-color: $contrastColorOpacityDark;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 1rem;
+  }
+
+  @mixin imgBeforeHover {
+    transition: 0.75s ease-in;
+    height: 40%;
+    background-color: $contrastColorOpacityDark;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    z-index: 3;
+    padding-top: 4rem;
+  }
+
+  &__img1 {
+    background: url("./assets/Shelter1.jpeg");
+    @include img;
 
     &::before {
       content: "Schronisko1";
-      font-weight: 200;
-      color: $mainColorDark;
-      width: 100%;
-      height: 4rem;
-      background-color: $contrastColorOpacityDark;
-      z-index: 2;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding-top: 1rem;
+      @include imgBefore;
     }
 
     &:hover {
       &::before {
-        transition: 0.75s ease-in;
+        @include imgBeforeHover;
         content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
-        height: 40%;
-        background-color: $contrastColorOpacityDark;
-        font-size: 1rem;
-        font-weight: 500;
-        text-align: center;
-        z-index: 3;
-        padding-top: 4rem;
-
       }
-
-
     }
-
   }
-
-
-
 
   &__img2 {
     background: url("./assets/Shelter4.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    @include img;
 
     &::before {
       content: "Schronisko2";
-      font-weight: 200;
-      color: $mainColorDark;
-      width: 100%;
-      height: 4rem;
-      background-color: $contrastColorOpacityDark;
-      z-index: 2;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding-top: 1rem;
+      @include imgBefore;
     }
 
     &:hover {
       &::before {
-        transition: 0.75s ease-in;
+        @include imgBeforeHover;
         content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
-        height: 40%;
-        background-color: $contrastColorOpacityDark;
-        font-size: 1rem;
-        font-weight: 500;
-        text-align: center;
-        z-index: 3;
-        padding-top: 4rem;
-
       }
     }
   }
 
-
     &__img3 {
       background: url("./assets/Shelter3.jpeg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
+      @include img;
 
       &::before {
         content: "Schronisko3";
-        font-weight: 200;
-        color: $mainColorDark;
-        width: 100%;
-        height: 4rem;
-        background-color: $contrastColorOpacityDark;
-        z-index: 2;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding-top: 1rem;
+        @include imgBefore;
       }
 
       &:hover {
         &::before {
-          transition: 0.75s ease-in;
+          @include imgBeforeHover;
           content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
-          height: 40%;
-          background-color: $contrastColorOpacityDark;
-          font-size: 1rem;
-          font-weight: 500;
-          text-align: center;
-          z-index: 3;
-          padding-top: 4rem;
-
         }
       }
     }
 
     &__img4 {
       background: url("./assets/Shelter2.jpeg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
+      @include img;
 
       &::before {
         content: "Schronisko4";
-        font-weight: 200;
-        color: $mainColorDark;
-        width: 100%;
-        height: 4rem;
-        background-color: $contrastColorOpacityDark;
-        z-index: 2;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding-top: 1rem;
+        @include imgBefore;
       }
 
       &:hover {
         &::before {
-          transition: 0.75s ease-in;
+          @include imgBeforeHover;
           content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci asperiores aspernatur culpa deserunt distinctio doloremque dolores esse exercitationem`";
-          height: 40%;
-          background-color: $contrastColorOpacityDark;
-          font-size: 1rem;
-          font-weight: 500;
-          text-align: center;
-          z-index: 3;
-          padding-top: 4rem;
+        }
+      }
+    }
 }
-}
-}}
 
 
 

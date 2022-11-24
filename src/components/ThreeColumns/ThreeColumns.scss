@@ -10,33 +10,32 @@
     padding: 0 2rem;
   }
 
-  &__numbers {
+  &__numbers,
+  &__title, {
     font-family: $headingFont;
-    font-size: 2rem;
-    color: $mainColorDark;
     font-weight: 500;
+  }
+
+  &__numbers,
+  &__title,
+  &__description {
     text-align: center;
     margin-bottom: 1rem;
+    color: $mainColorDark;
+  }
+
+  &__numbers {
+    font-size: 2rem;
   }
 
   &__title {
-    font-family: $headingFont;
     font-size: 1rem;
-    color: $mainColorDark;
-    font-weight: 500;
-    text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1rem;
-
   }
 
   &__description {
     font-family: $paragraphFont;
     font-size: 0.8rem;
-    color: $mainColorDark;
     font-weight: 300;
-    text-align: center;
-    margin-bottom: 1rem;
-
   }
 }

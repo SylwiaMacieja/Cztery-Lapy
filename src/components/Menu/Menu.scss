@@ -1,3 +1,20 @@
+@mixin itemMenu {
+  text-decoration: none;
+  font-family: $headingFont;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: $mainColorLight;
+  text-transform: uppercase;
+}
+
+@mixin hamMenuItems {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 0.8rem;
+  border-bottom: 0.2rem solid $mainColorLight;
+}
+
 .Menu__container {
   width: 100vw;
   height: 4rem;
@@ -30,24 +47,18 @@
     }
   }
 
-
-
-
     li:first-of-type,
     li:nth-of-type(2),
     li:nth-of-type(3),
     li:nth-of-type(4),
     li:nth-of-type(5) {
       &:hover {
-
         padding-top: 1.5rem;
         padding-bottom: 1.4rem;
         border-top: 0.25rem solid $contrastColor;
       }
     }
   }
-
-
 
   .Menu {
     &__hamburger {
@@ -58,22 +69,13 @@
       margin: 1.25rem 0 0 1rem;
 
       &::after {
-        content: '';
-        position: absolute;
+        @include hamMenuItems;
         top: 10%;
-        width: 1.5rem;
-        height: 0.8rem;
-        border-bottom: 0.2rem solid $mainColorLight;
       }
 
       &::before {
-        content: '';
-        position: absolute;
+        @include hamMenuItems;
         top: -65%;
-        width: 1.5rem;
-        height: 0.8rem;
-        border-bottom: 0.2rem solid $mainColorLight;
-
       }
     }
 
@@ -84,26 +86,14 @@
       justify-content: flex-start;
       align-items: center;
 
-
-
       &__item {
+        @include itemMenu;
         height: 4rem;
-        text-decoration: none;
-        font-family: $headingFont;
-        font-size: 0.7rem;
-        font-weight: 700;
         letter-spacing: 0.1rem;
-        color: $mainColorLight;
-        text-transform: uppercase;
         text-align: center;
         margin: 0.75rem 0 0.75rem 0.75rem;
-
-
-
       }
     }
-
-
 
     &__right {
       flex-basis: 33%;
@@ -114,17 +104,9 @@
       align-items: center;
       letter-spacing: 0.1rem;
 
-
-
       &__item {
-        text-decoration: none;
-        font-family: $headingFont;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: $mainColorLight;
-        text-transform: uppercase;
+        @include itemMenu;
         margin: 0.75rem;
-
       }
 
       li:first-of-type {
@@ -138,11 +120,6 @@
       li:last-of-type {
         color: $contrastColor;
       }
-     //&:hover {
-     // border: 0.2rem solid $contrastColor;
-     //  color: $contrastColor;
-     //  }
-     // }
     }
   }
 

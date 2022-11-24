@@ -9,33 +9,27 @@
   justify-content: center;
   align-items: center;
 
-
-  &__heading {
-
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    width: 100%;
-    text-align: center;
-    font-family: $headingFont;
-    font-weight: 100;
-    color: $mainColorMiddle;
-    letter-spacing: 0.2rem;
-    padding-bottom: 2rem;
-
-  }
-
+  &__heading,
   &__description {
     width: 100%;
     text-align: center;
     font-family: $headingFont;
-    font-weight: 400;
-    font-size: 1rem;
-    color: $contrastColor;
     letter-spacing: 0.2rem;
     padding-bottom: 2rem;
   }
 
+  &__heading {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: $mainColorMiddle;
+  }
 
+  &__description {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $contrastColor;
+  }
 
   &__btn {
     width: 18rem;
@@ -51,11 +45,6 @@
     border: 0.2rem solid $contrastColor;
     background-color: $contrastColorOpacity;
     margin-top: 2rem;
-
-
-
-
-
   }
 }
 

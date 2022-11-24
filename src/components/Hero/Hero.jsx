@@ -8,7 +8,7 @@ export function Hero () {
                 <h1 className='Hero__heading'>I Ty możesz <br/>pomóc</h1>
                 <p className='Hero__description'>Przekaż karmę lub akcesoria dla zwierząt wybranemu schronisku</p>
 
-            <NavLink className="Hero__btn" to="/providedogfood">Przekaż </NavLink>
+            <NavLink className="Hero__btn" to="/login">Przekaż </NavLink>
 
         </div>
     )

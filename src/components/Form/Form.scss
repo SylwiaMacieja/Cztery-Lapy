@@ -75,18 +75,16 @@
   }
 
   &__error {
-
     font-family: $headingFont;
     color: $contrastColor;
-    font-size: 1rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-align: center;
     border: 0.1rem solid $contrastColor;
-    margin: 4rem;
-    padding: 2rem 0;
-
+    padding: 1rem 0;
+    margin: 2rem;
 
   }
 }

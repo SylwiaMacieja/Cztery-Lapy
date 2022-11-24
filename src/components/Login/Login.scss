@@ -1,0 +1,98 @@
+.Login {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: flex-end;
+  background-color: black;
+
+  &__img {
+    background: url("./assets/LoginDog.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18rem;
+
+
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: $mainColorMiddle;
+    width: 100%;
+    font-family: $headingFont;
+    letter-spacing: 0.2rem;
+    padding-bottom: 2rem;
+    margin-top: 8rem;
+
+  }
+
+  &__input {
+    appearance: none;
+    width: 30rem;
+    border: none;
+    border-bottom: .1rem solid $mainColorLight;
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: black;
+  }
+  &__error {
+    width: 100%;
+    font-family: $headingFont;
+    color: $contrastColor;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-align: center;
+    border: 0.1rem solid $contrastColor;
+    margin: 2rem;
+    padding: 1rem 0;
+  }
+
+
+  &__btn {
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding:1rem;
+    font-family: $headingFont;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: $mainColorLight;
+    border: 0.2rem solid $contrastColor;
+    background-color: $contrastColorOpacity;
+    margin-top: 2rem;
+  }
+
+  &__registration {
+    width: 100%;
+    font-family: $headingFont;
+    letter-spacing: 0.2rem;
+    padding: 2rem 0;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: $contrastColor;
+    text-align: right;
+
+
+    &__btn {
+      text-decoration: none;
+      border: 0.1rem solid $contrastColor;
+      color: $contrastColor;
+      margin-right: 2rem;
+
+
+
+    }
+  }
+}
