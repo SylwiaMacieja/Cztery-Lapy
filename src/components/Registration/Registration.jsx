@@ -1,41 +1,45 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 
-const validate = form => {
-    if(!form.email) {
+const validateReg = registration => {
+    if(!registration.emailReg) {
         return'Email jest wymagany'
-    } else if (!form.email.includes('@')) {
+    } else if (!registration.emailReg.includes('@')) {
         return 'Zły format email'
     }
-    if(!form.password) {
+    if(!registration.passwordReg) {
         return'Hasło jest wymagane'
     }
-    if(!form.password === form.checkPassword) {
-        return'Hasła nie są identyczne'
+    if(!registration.checkPasswordReg) {
+        return'Powtórzenie hasła jest wymagane'
+    } else if (registration.passwordReg !== registration.checkPasswordReg) {
+        return'Hasła nie są takie same'
     }
+    return null
 }
 
 export function Registration () {
 
-    const [error, setError] = useState(null);
-    const [form, setForm] = useState ({
-        email:'',
-        password:'',
-        checkPassword:'',
+    const [errorReg, setErrorReg ] = useState(null);
+    const [registration, setRegistration] = useState ({
+        emailReg:'',
+        passwordReg:'',
+        checkPasswordReg:'',
     });
 
-    const update = event => {
-        setForm ({
-            ...form,
-            [event.target.email]: event.target.value
+    const updateReg = event => {
+        setRegistration({
+            ...registration,
+            [event.target.name]: event.target.value
+
         })
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmitReg = (event) => {
         event.preventDefault();
-        const errorMsg = validate(form);
-        if (errorMsg) {
-            setError(errorMsg);
+        const errorMsgReg = validateReg(registration);
+        if (errorMsgReg) {
+            setErrorReg(errorMsgReg);
             return
         }
         alert (
@@ -57,12 +61,12 @@ export function Registration () {
 
                 <h1 className='Registration__title'> Rejestracja </h1>
 
-                <form className='Registration__form' onSubmit={handleSubmit}>
-                    <input className='Registration__input' type='text' name='email' placeholder='Email' onChange={update}></input>
-                    <input className='Registration__input' type='text' name='password' placeholder='Hasło' onChange={update}></input>
-                    <input className='Registration__input' type='text' name='checkPassword' placeholder='Hasło' onChange={update}></input>
+                <form className='Registration__form' onSubmit={handleSubmitReg}>
+                    <input className='Registration__input' type='text' name='emailReg' placeholder='Email' onChange={updateReg}></input>
+                    <input className='Registration__input' type='text' name='passwordReg' placeholder='Hasło' onChange={updateReg}></input>
+                    <input className='Registration__input' type='text' name='checkPasswordReg' placeholder='Powtórz hasło' onChange={updateReg}></input>
                     <button className='Registration__btn' type='submit'>Zarejestruj się</button>
-                    {error && (<div className='Registration__error'>{error}</div> )}
+                    {errorReg && (<div className='Registration__error'>{errorReg}</div> )}
                 </form>
 
             </div>

@@ -30,7 +30,7 @@
     font-family: $headingFont;
     letter-spacing: 0.2rem;
     padding-bottom: 2rem;
-    margin-top: 8rem;
+    margin-top: 5rem;
 
   }
 
@@ -42,7 +42,10 @@
     padding: 0.5rem;
     margin: 1rem;
     background-color: black;
+    color: $mainColorLight;
+    font-family: $paragraphFont;
   }
+
   &__error {
     width: 100%;
     font-family: $headingFont;
@@ -90,9 +93,6 @@
       border: 0.1rem solid $contrastColor;
       color: $contrastColor;
       margin-right: 2rem;
-
-
-
     }
   }
 }

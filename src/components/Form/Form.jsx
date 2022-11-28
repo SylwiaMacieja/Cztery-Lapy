@@ -35,7 +35,6 @@ export function Form () {
         surname:'',
         email: '',
         q1: '',
-
     });
 
     const update = event => {

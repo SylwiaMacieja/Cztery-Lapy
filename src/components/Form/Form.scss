@@ -54,10 +54,12 @@
     appearance: none;
     width: 30rem;
     border: none;
+    font-family: $paragraphFont;
     border-bottom: .1rem solid $mainColorLight;
     padding: 0.5rem;
     margin: 1rem;
     background-color: $mainColorDark;
+    color: $mainColorLight;
 
     &:focus {
       border: 0.2em solid $contrastColor;
@@ -72,6 +74,8 @@
     padding: 0.5rem;
     margin: 1rem;
     background-color: $mainColorDark;
+    color: $mainColorLight;
+    font-family: $paragraphFont;
   }
 
   &__error {
