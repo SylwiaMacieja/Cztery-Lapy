@@ -7,8 +7,12 @@
 @import "src/components/ForWho/ForWho.scss";
 @import "src/components/Form/Form.scss";
 @import "src/components/Footer/Footer.scss";
-@import "src/components/Login/Login.scss";
-@import "src/components/Registration/Registration.scss";
+@import "src/Pages/Login/Login.scss";
+@import "src/Pages/Registration/Registration.scss";
+@import "src/components/LoginMenu/LoginMenu.scss";
+@import "src/components/LoginStep1/LoginStep1.scss";
+@import "src/components/LoginStep2/LoginStep2.scss";
+@import "src/components/LoginStep3/LoginStep3.scss";
 
 body {
   background-color: $mainColorDark;

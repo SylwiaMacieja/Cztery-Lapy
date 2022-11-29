@@ -1,0 +1,23 @@
+.MenuLogin {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__info,
+  &__btn {
+    text-decoration: none;
+    color: $contrastColor;
+    margin: 1rem 1rem;
+    padding: 0.5rem;
+    font-family: $headingFont;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+
+  &__btn{
+    border: 0.1rem solid $contrastColor;
+    text-transform: uppercase;
+
+  }
+}

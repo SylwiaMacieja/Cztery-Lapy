@@ -1,8 +1,12 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
+import supabase from "../../supabase/supabaseClient.jsx";
+// import {createClient} from "@supabase/supabase-js";
+import {useNavigate} from "react-router-dom";
 
 
 const loginValidate = login => {
+
     if (!login.loginEmail) {
         return 'Email jest wymagany'
     } else if (login.loginEmail.length <= 5) {
@@ -18,6 +22,7 @@ const loginValidate = login => {
 }
 
 export function Login () {
+
     const [login, setLogin] = useState({
         loginEmail: '',
         loginPassword: '',
@@ -32,14 +37,25 @@ export function Login () {
     }
 
 
-    const loginSubmit = event => {
+    const loginSubmit = async (event) => {
         event.preventDefault();
+        // const navigate = useNavigate();
+
+
+        const [ loginEmail, loginPassword] = event.target.elements;
+
+
+
         const loginErrorMsg = loginValidate(login);
+
         if (loginErrorMsg) {
             setLoginError(loginErrorMsg);
             return
         }
-        alert ('pomyślnie zalogowano')
+            let { data: { user, error }} = await supabase.auth.signInWithPassword({
+            email: loginEmail.value,
+            password: loginPassword.value,
+        });
     }
 
     return (
@@ -55,7 +71,7 @@ export function Login () {
                 <h1 className='Login__title'> Logowanie </h1>
                 <form
                     className="Login__form"
-                    onSubmit={loginSubmit}>
+                    onSubmit={(event) => loginSubmit(event)}>
                     <input
                         className='Login__input'
                         type='text' name="loginEmail"

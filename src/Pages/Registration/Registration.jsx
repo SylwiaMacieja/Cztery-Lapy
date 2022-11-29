@@ -1,5 +1,9 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import supabase from "../../supabase/supabaseClient.jsx";
+
+
 
 const validateReg = registration => {
     if(!registration.emailReg) {
@@ -19,6 +23,7 @@ const validateReg = registration => {
 }
 
 export function Registration () {
+    const navigate = useNavigate();
 
     const [errorReg, setErrorReg ] = useState(null);
     const [registration, setRegistration] = useState ({
@@ -35,17 +40,21 @@ export function Registration () {
         })
     }
 
-    const handleSubmitReg = (event) => {
+    const handleSubmitReg = async (event) => {
         event.preventDefault();
+
+        const [ emailReg, passwordReg, checkPasswordReg ] = event.target.elements;
+
         const errorMsgReg = validateReg(registration);
         if (errorMsgReg) {
             setErrorReg(errorMsgReg);
             return
         }
-        alert (
-            `Pomyślnie zarejestrowano`
-        );
-        event.target.reset()
+        let { data: {user, error}} = await supabase.auth.signUp({
+            email: emailReg.value,
+            password: passwordReg.value,
+        });
+        navigate('/login')
     }
     return (
         <div className='Registration'>
@@ -61,11 +70,34 @@ export function Registration () {
 
                 <h1 className='Registration__title'> Rejestracja </h1>
 
-                <form className='Registration__form' onSubmit={handleSubmitReg}>
-                    <input className='Registration__input' type='text' name='emailReg' placeholder='Email' onChange={updateReg}></input>
-                    <input className='Registration__input' type='text' name='passwordReg' placeholder='Hasło' onChange={updateReg}></input>
-                    <input className='Registration__input' type='text' name='checkPasswordReg' placeholder='Powtórz hasło' onChange={updateReg}></input>
-                    <button className='Registration__btn' type='submit'>Zarejestruj się</button>
+                <form className='Registration__form' onSubmit={(e) => handleSubmitReg(e)}>
+                    <input
+                        className='Registration__input'
+                        type='text' name='emailReg'
+                        placeholder='Email'
+                        onChange={updateReg}>
+
+                    </input>
+                    <input
+                        className='Registration__input'
+                        type='password'
+                        name='passwordReg'
+                        placeholder='Hasło'
+                        onChange={updateReg}>
+
+                    </input>
+                    <input
+                        className='Registration__input'
+                        type='password'
+                        name='checkPasswordReg'
+                        placeholder='Powtórz hasło'
+                        onChange={updateReg}>
+
+                    </input>
+                    <button
+                        className='Registration__btn'
+                        type='submit'>
+                        Zarejestruj się</button>
                     {errorReg && (<div className='Registration__error'>{errorReg}</div> )}
                 </form>
 
