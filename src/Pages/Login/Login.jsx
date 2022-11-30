@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import supabase from "../../supabase/supabaseClient.jsx";
-// import {createClient} from "@supabase/supabase-js";
+
+
 import {useNavigate} from "react-router-dom";
 
 
@@ -19,6 +20,7 @@ const loginValidate = login => {
     } else if (login.loginPassword.length <= 3) {
         return "Hasło jest za krótkie"
     }
+
 }
 
 export function Login () {
@@ -42,8 +44,7 @@ export function Login () {
         // const navigate = useNavigate();
 
 
-        const [ loginEmail, loginPassword] = event.target.elements;
-
+        const [loginEmail, loginPassword] = event.target.elements;
 
 
         const loginErrorMsg = loginValidate(login);
@@ -52,10 +53,15 @@ export function Login () {
             setLoginError(loginErrorMsg);
             return
         }
-            let { data: { user, error }} = await supabase.auth.signInWithPassword({
+        let {data: {user, error}} = await supabase.auth.signInWithPassword({
             email: loginEmail.value,
             password: loginPassword.value,
         });
+
+        localStorage.setItem('userData', JSON.stringify(user));
+        // if (error) {
+        //     return;
+        // }
     }
 
     return (
