@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import supabase from "../../supabase/supabaseClient.jsx";
-
-
 import {useNavigate} from "react-router-dom";
 
 
@@ -29,7 +27,7 @@ export function Login () {
         loginEmail: '',
         loginPassword: '',
     })
-    const [loginError, setLoginError] = useState(null)
+    const [loginError, setLoginError] = useState(null);
 
     const loginUpdate = event => {
         setLogin({
@@ -41,11 +39,10 @@ export function Login () {
 
     const loginSubmit = async (event) => {
         event.preventDefault();
-        // const navigate = useNavigate();
 
+        const navigate = useNavigate();
 
         const [loginEmail, loginPassword] = event.target.elements;
-
 
         const loginErrorMsg = loginValidate(login);
 
@@ -57,11 +54,8 @@ export function Login () {
             email: loginEmail.value,
             password: loginPassword.value,
         });
-
         localStorage.setItem('userData', JSON.stringify(user));
-        // if (error) {
-        //     return;
-        // }
+        navigate('/');
     }
 
     return (
