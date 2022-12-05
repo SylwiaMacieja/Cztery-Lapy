@@ -8,6 +8,12 @@
     gap: 2rem;
     background-color: $contrastColorOpacityDark;
     padding: 0 2rem;
+
+    @media (max-width: 756px){
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
   }
 
   &__numbers,

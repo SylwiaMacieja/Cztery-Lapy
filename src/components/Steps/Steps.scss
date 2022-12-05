@@ -12,6 +12,12 @@
     text-transform: uppercase;
     border-bottom: .1rem solid $mainColorLight;
     margin: 0 8rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      margin: 0 2rem;
+    }
+
   }
 
   &__container {
@@ -20,6 +26,14 @@
     gap: 1rem;
     padding: 1rem 1rem;
     margin: 2rem 20rem;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
 
   }
 

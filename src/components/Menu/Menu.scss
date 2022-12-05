@@ -5,6 +5,7 @@
   font-weight: 700;
   color: $mainColorLight;
   text-transform: uppercase;
+
 }
 
 @mixin hamMenuItems {
@@ -13,40 +14,67 @@
   width: 1.5rem;
   height: 0.8rem;
   border-bottom: 0.2rem solid $mainColorLight;
+
+  @media (max-width: 768px) {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    border: none;
+  }
 }
 
-.Menu__container {
-  width: 100vw;
-  height: 4rem;
-  display: flex;
-  justify-content: flex-start;
-  position: fixed;
-  background: linear-gradient(to bottom, $mainColorDarkOpacity, $mainColorLightOpacity);
-  box-shadow: 0 0 0.2rem 0 $mainColorLight;
-  z-index: 10;
 
+  .Menu__container {
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    background: linear-gradient(to bottom, $mainColorDarkOpacity, $mainColorLightOpacity);
+    box-shadow: 0 0 0.2rem 0 $mainColorLight;
+    z-index: 10;
 
-  &:hover {
-    .Menu__left,
-    .Menu__right {
-      transition: 0.3s ease-in;
-      visibility: visible;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 50vh;
+      position: relative;
     }
 
-    .Menu {
 
-      &__hamburger {
-        &::after {
-          width: 0.5rem;
-          transition: 0.5s ease-in;
-        }
-        &::before {
-          width: 1rem;
-          transition: 0.5s ease-in;
+    &:hover {
+      .Menu__left,
+      .Menu__right {
+        transition: 0.3s ease-in;
+        visibility: visible;
+      }
+
+      .Menu {
+
+        &__hamburger {
+          &::after {
+            width: 0.5rem;
+            transition: 0.5s ease-in;
+
+            @media (max-width: 768px) {
+              visibility: hidden;
+            }
+          }
+
+          &::before {
+            width: 1rem;
+            transition: 0.5s ease-in;
+
+            @media (max-width: 768px) {
+              visibility: hidden;
+            }
+
+          }
         }
       }
     }
-  }
 
     li:first-of-type,
     li:nth-of-type(2),
@@ -57,6 +85,13 @@
         padding-top: 1.5rem;
         padding-bottom: 1.4rem;
         border-top: 0.25rem solid $contrastColor;
+
+        @media (max-width: 768px) {
+          border: none;
+          padding: 0;
+          transform: scale(1.2);
+          color: $contrastColor;
+        }
       }
     }
   }
@@ -78,6 +113,10 @@
         @include hamMenuItems;
         top: -65%;
       }
+
+      @media (max-width: 768px) {
+        visibility: hidden;
+      }
     }
 
     &__left {
@@ -87,6 +126,14 @@
       justify-content: flex-start;
       align-items: center;
 
+      @media (max-width: 768px) {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
       &__item {
         @include itemMenu;
         height: 4rem;
@@ -94,17 +141,29 @@
         text-align: center;
         margin: 0.75rem 0 0.75rem 0.75rem;
       }
+
+      @media (max-width: 786px) {
+        margin: 0;
+        padding: 2rem;
+      }
     }
 
     &__right {
       flex-basis: 33%;
       visibility: hidden;
-      height: 100%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       letter-spacing: 0.1rem;
       margin-right: 1rem;
+
+      @media (max-width: 768px){
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
 
       &__item {
         @include itemMenu;
@@ -116,11 +175,25 @@
           padding-top: 1.5rem;
           padding-bottom: 1.4rem;
           border-top: 0.25rem solid $contrastColor;
+
+          @media (max-width: 768px) {
+            border: none;
+            padding: 0;
+            transform: scale(1.2);
+            color: $contrastColor;
+          }
         }
       }
 
       li:last-of-type {
         color: $contrastColor;
+
+        @media (max-width: 768px) {
+          border: none;
+          padding: 0;
+          transform: scale(1.2);
+          color: $contrastColor;
+        }
       }
     }
   }
@@ -133,7 +206,17 @@
     font-weight: 700;
     color: $contrastColor;
     text-align: center;
+
+    @media (max-width: 768px){
+      font-size: 1.5rem;
+    }
   }
+
+
+
+
+
+
 
 
 

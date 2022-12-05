@@ -7,6 +7,17 @@
     margin: 8rem;
     background-color: $mainColorLight;
     padding: 4rem;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      padding: 2rem;
+      margin: 2rem;
+
+    }
   }
   &__text {
     display: flex;

@@ -9,12 +9,27 @@
   margin-bottom: 4rem;
   margin-top: 12rem;
 
+  @media (max-width: 756px) {
+    text-align: center;
+    font-family: $headingFont;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $mainColorLight;
+    letter-spacing: normal;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
+
   &__container {
     height: 70vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 2rem 0;
     z-index: 1;
+
   }
 
   @mixin img {
@@ -46,6 +61,11 @@
     text-align: center;
     z-index: 3;
     padding-top: 4rem;
+
+    @media (max-width: 756px) {
+      font-size: 0.7rem;
+
+    }
   }
 
   &__img1 {
