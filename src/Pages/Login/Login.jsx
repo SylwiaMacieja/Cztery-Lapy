@@ -22,6 +22,7 @@ const loginValidate = login => {
 }
 
 export function Login () {
+    const navigate = useNavigate();
 
     const [login, setLogin] = useState({
         loginEmail: '',
@@ -40,7 +41,7 @@ export function Login () {
     const loginSubmit = async (event) => {
         event.preventDefault();
 
-        const navigate = useNavigate();
+
 
         const [loginEmail, loginPassword] = event.target.elements;
 
@@ -50,10 +51,17 @@ export function Login () {
             setLoginError(loginErrorMsg);
             return
         }
-        let {data: {user, error}} = await supabase.auth.signInWithPassword({
+        let {data: {user}, error} = await supabase.auth.signInWithPassword({
             email: loginEmail.value,
             password: loginPassword.value,
         });
+
+
+        if (error) {
+            console.log(error)
+            setLoginError("błąd");
+            return
+        }
         localStorage.setItem('userData', JSON.stringify(user));
         navigate('/');
     }

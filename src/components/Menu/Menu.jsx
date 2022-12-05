@@ -7,7 +7,7 @@ import supabase from "../../supabase/supabaseClient.jsx";
 
 export function Menu () {
     const [isLogged, setIsLogged] = useState(false);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const isUserLogged = async () => {
@@ -23,8 +23,14 @@ export function Menu () {
     }, []);
 
 
-    // const logoutUser = async (event) => {
-    //     let {error} = await supabase.auth.signOut();
+    const logoutUser = async () => {
+        let { error } = await supabase.auth.signOut();
+
+        if (!error) {
+            localStorage.removeItem('userData');
+            navigate('/signout');
+        }
+    }
 
 
         return (
@@ -44,8 +50,7 @@ export function Menu () {
                 <ul className="Menu__right">
                     {isLogged && (
                         <>
-                            {/*<li className="Menu__right__item">{user.email}</li>*/}
-                        <li><NavLink className="Menu__right__item" to="/signout" /*onClick={(event) => logoutUser(event)}*/ >Wyloguj</NavLink>
+                        <li><a className="Menu__right__item" onClick={(event) => logoutUser(event)}>Wyloguj</a>
                         </li>
                         </>)}
                     {!isLogged && (
@@ -57,6 +62,6 @@ export function Menu () {
                 </ul>
             </div>
         );
-    // }
+
 }
 
