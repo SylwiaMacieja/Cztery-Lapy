@@ -68,18 +68,20 @@ export function Login () {
 
     return (
         <div className="Login">
-            <div className="Login__img"> </div>
 
             <div>
                 <div className='Login__registration'>Nie masz konta??
                     <NavLink className='Registration__login__btn' to='/registration'>Zarejestruj się</NavLink>
-                    ...lub wróć
-                    <NavLink className='Registration__login__btn' to='/'>Strona główna</NavLink>
                 </div>
-                <h1 className='Login__title'> Logowanie </h1>
+
+                <div className='Login__registration'>   ...lub wróć
+                 <NavLink className='Registration__login__btn' to='/'>Strona główna</NavLink>
+                </div>
+
                 <form
                     className="Login__form"
                     onSubmit={(event) => loginSubmit(event)}>
+                    <h1 className='Login__title'> Logowanie </h1>
                     <input
                         className='Login__input'
                         type='text' name="loginEmail"
