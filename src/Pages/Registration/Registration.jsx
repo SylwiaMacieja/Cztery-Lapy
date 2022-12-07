@@ -58,14 +58,14 @@ export function Registration () {
     }
     return (
         <div className='Registration'>
-            <div className='Registration__img'>
-            </div>
             <div>
                 <div className='Registration__login'>Masz konto??
                     <NavLink className='Login__registration__btn' to='/login'>Zaloguj się</NavLink>
-                    ...lub wróć
+                </div>
+                <div className='Registration__login'>...lub wróć
                     <NavLink className='Login__registration__btn' to='/'>Strona główna</NavLink>
                 </div>
+            </div>
 
 
                 <h1 className='Registration__title'> Rejestracja </h1>
@@ -100,9 +100,7 @@ export function Registration () {
                         Zarejestruj się</button>
                     {errorReg && (<div className='Registration__error'>{errorReg}</div> )}
                 </form>
-
-            </div>
-
         </div>
-    )
+)
 }
+
