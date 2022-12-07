@@ -3,7 +3,7 @@ import React from "react";
 export function Steps () {
     return (
         <section className="Steps" id='info'>
-            <p className="Steps__title">Wstarczą 3 proste kroki</p>
+            <p className="Steps__title">Wystarczą 3 proste kroki</p>
             <div className='Steps__container'>
 
                 <div className="Steps__package">
