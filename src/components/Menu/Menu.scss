@@ -14,6 +14,9 @@
   width: 1.5rem;
   height: 0.8rem;
   border-bottom: 0.2rem solid $mainColorLight;
+  @media (max-width: 768px){
+    visibility: hidden;
+  }
 
 
 }
@@ -31,7 +34,7 @@
 
     @media (max-width: 768px){
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       //justify-content: center;
       //align-items: flex-start;
       height: auto;
@@ -47,15 +50,21 @@
       .Menu {
 
         &__hamburger {
+
           &::after {
             width: 0.5rem;
             transition: 0.5s ease-in;
-
+            @media (max-width: 768px){
+              visibility: hidden;
+            }
           }
 
           &::before {
             width: 1rem;
             transition: 0.5s ease-in;
+            @media (max-width: 768px){
+              visibility: hidden;
+            }
           }
         }
       }
@@ -87,10 +96,14 @@
       border-top: 0.2rem solid $mainColorLight;
       position: relative;
       margin: 1.25rem 0 0 1rem;
+      @media (max-width: 768px){
+        visibility: hidden;
+      }
 
       &::after {
         @include hamMenuItems;
         top: 10%;
+
       }
 
       &::before {
@@ -107,10 +120,12 @@
       justify-content: flex-start;
       align-items: center;
 
+
       @media (max-width: 768px){
-        flex-direction: column;
-        margin-top: 1rem;
+        justify-content: center;
+        visibility: visible;
       }
+
 
 
       &__item {
@@ -119,6 +134,11 @@
         letter-spacing: 0.1rem;
         text-align: center;
         margin: 0.75rem 0 0.75rem 0.75rem;
+
+        @media (max-width: 768px){
+          font-size: 0.4rem;
+        }
+
       }
     }
 
