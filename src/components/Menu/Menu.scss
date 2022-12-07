@@ -71,8 +71,11 @@
         padding-top: 1.5rem;
         padding-bottom: 1.4rem;
         border-top: 0.25rem solid $contrastColor;
-
+        @media (max-width: 768px) {
+          padding: 0;
+          border: none;
         }
+      }
       }
     }
 
@@ -139,13 +142,19 @@
           padding-top: 1.5rem;
           padding-bottom: 1.4rem;
           border-top: 0.25rem solid $contrastColor;
-
+        @media (max-width: 768px) {
+          padding: 0;
+          border: none;
+        }
 
         }
       }
 
       li:last-of-type {
-        color: $contrastColor;
+        @media (max-width: 768px) {
+          padding: 0;
+          border: none;
+        }
 
 
       }
