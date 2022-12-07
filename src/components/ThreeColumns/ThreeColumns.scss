@@ -1,13 +1,15 @@
 .Info {
 
+
   &__container {
-    height: 30vh;
+    height: 40vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     background-color: $contrastColorOpacityDark;
-    padding: 0 2rem;
+    padding: 2rem;
 
     @media (max-width: 756px){
       display: flex;
@@ -26,12 +28,13 @@
   &__title,
   &__description {
     text-align: center;
-    margin-bottom: 1rem;
     color: $mainColorDark;
+    margin: 1rem 0;
   }
 
   &__numbers {
     font-size: 2rem;
+    font-weight: 800;
   }
 
   &__title {

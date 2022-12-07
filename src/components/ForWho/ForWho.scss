@@ -1,4 +1,5 @@
 .ForWho {
+  width: 100vw;
   height: 80vh;
   text-align: center;
   font-family: $headingFont;
@@ -6,30 +7,23 @@
   font-size: 2rem;
   color: $mainColorLight;
   letter-spacing: 0.2rem;
-  margin-bottom: 4rem;
-  margin-top: 12rem;
+  margin: 4rem 0;
 
   @media (max-width: 756px) {
-    text-align: center;
-    font-family: $headingFont;
-    font-weight: 700;
+   margin: 4rem 0;
     font-size: 1rem;
-    color: $mainColorLight;
-    letter-spacing: normal;
-    margin-bottom: 1rem;
+    height: 60vh;
   }
 
-  @media (max-width: 992px) {
-    font-size: 1rem;
-  }
 
   &__container {
-    height: 70vh;
+    width: 100vw;
+    height: 80vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 25%));
+    justify-content: center;
+    margin: 4rem 0;
     z-index: 1;
-
   }
 
   @mixin img {
@@ -54,16 +48,17 @@
 
   @mixin imgBeforeHover {
     transition: 0.75s ease-in;
-    height: 40%;
+    height: 60%;
     background-color: $contrastColorOpacityDark;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
     z-index: 3;
-    padding-top: 4rem;
+    padding-top: 2rem;
 
     @media (max-width: 756px) {
       font-size: 0.7rem;
+      height: 65%;
 
     }
   }

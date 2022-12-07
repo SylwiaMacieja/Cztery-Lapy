@@ -1,15 +1,16 @@
 .Container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 5rem;
+  justify-content: center;
   gap: 2rem;
-  padding-top: 1rem;
+  padding: 1rem 0;
 
   @media (max-width: 768px) {
    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 2rem;
+    align-items: center;
+    margin: 10rem;
   }
   @media (max-width: 992px) {
     display: flex;
@@ -46,7 +47,7 @@
 
   &__button {
     //margin-left: 24em;
-    margin-top: 1em;
+    margin-top: 1rem;
     width: 20em;
     font-family: $headingFont;
     font-size: 1rem;
@@ -58,7 +59,7 @@
     margin-bottom: 1em;
 
     @media (max-width: 768px) {
-      width: 40vh;
+      width: 60vw;
     }
 
     &:hover {
@@ -84,7 +85,7 @@
     }
 
     @media (max-width: 768px) {
-      width: 60vh;
+      width: 60vw;
     }
   }
 
@@ -100,7 +101,7 @@
     font-family: $paragraphFont;
 
     @media (max-width: 768px) {
-      width: 60vh;
+      width: 60vw;
     }
   }
 

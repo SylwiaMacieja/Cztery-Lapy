@@ -40,13 +40,12 @@ export function Menu () {
                     <li><Link className="Menu__left__item" to='home' smooth={true} duration={500}>Start</Link></li>
                     <li><Link className="Menu__left__item" to='info' offset={-40} smooth={true}
                               duration={500}>Info</Link></li>
-                    <li><Link className="Menu__left__item" to='about' offset={-120} smooth={true} duration={500}>O
-                        nas</Link></li>
+                    <li><Link className="Menu__left__item" to='about' offset={-120} smooth={true} duration={500}>My</Link></li>
                     <li><Link className="Menu__left__item" to='ForWho' offset={-100} smooth={true}
                               duration={500}>Schroniska</Link></li>
                     <li><Link className="Menu__left__item" to='form' smooth={true} duration={1000}>Kontakt</Link></li>
                 </ul>
-                <div className="Menu__logo">Cztery Łapy</div>
+                <div className="Menu__logo">CzteryŁapy</div>
                 <ul className="Menu__right">
                     {isLogged && (
                         <>
@@ -56,7 +55,7 @@ export function Menu () {
                     {!isLogged && (
                         <>
                     <li><NavLink className="Menu__right__item" to="/login">Zaloguj</NavLink></li>
-                    <li><NavLink className="Menu__right__item" to="/registration">Załóż konto</NavLink></li>
+                    <li><NavLink className="Menu__right__item" to="/registration">Rejestracja</NavLink></li>
                         </>
                         )}
                 </ul>

@@ -9,6 +9,10 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 768px) {
+  height: 80vh;
+  }
+
   &__heading,
   &__description {
     width: 100%;
@@ -16,6 +20,10 @@
     font-family: $headingFont;
     letter-spacing: 0.2rem;
     padding-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      transform: scale(0.8);
+    }
   }
 
   &__heading {
@@ -45,6 +53,10 @@
     border: 0.2rem solid $contrastColor;
     background-color: $contrastColorOpacity;
     margin-top: 2rem;
+
+    @media (max-width: 768px) {
+      transform: scale(0.8);
+    }
   }
 }
 

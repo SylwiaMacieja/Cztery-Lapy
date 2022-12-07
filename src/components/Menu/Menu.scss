@@ -15,12 +15,7 @@
   height: 0.8rem;
   border-bottom: 0.2rem solid $mainColorLight;
 
-  @media (max-width: 768px) {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    border: none;
-  }
+
 }
 
 
@@ -34,15 +29,14 @@
     box-shadow: 0 0 0.2rem 0 $mainColorLight;
     z-index: 10;
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px){
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      height: 50vh;
+      justify-content: center;
+      align-items: flex-start;
+      height: auto;
       position: relative;
     }
-
 
     &:hover {
       .Menu__left,
@@ -58,19 +52,11 @@
             width: 0.5rem;
             transition: 0.5s ease-in;
 
-            @media (max-width: 768px) {
-              visibility: hidden;
-            }
           }
 
           &::before {
             width: 1rem;
             transition: 0.5s ease-in;
-
-            @media (max-width: 768px) {
-              visibility: hidden;
-            }
-
           }
         }
       }
@@ -86,15 +72,9 @@
         padding-bottom: 1.4rem;
         border-top: 0.25rem solid $contrastColor;
 
-        @media (max-width: 768px) {
-          border: none;
-          padding: 0;
-          transform: scale(1.2);
-          color: $contrastColor;
         }
       }
     }
-  }
 
   .Menu {
     &__hamburger {
@@ -114,9 +94,6 @@
         top: -65%;
       }
 
-      @media (max-width: 768px) {
-        visibility: hidden;
-      }
     }
 
     &__left {
@@ -126,13 +103,11 @@
       justify-content: flex-start;
       align-items: center;
 
-      @media (max-width: 768px) {
-        visibility: visible;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+      @media (max-width: 768px){
+
+        margin-top: 1rem;
       }
+
 
       &__item {
         @include itemMenu;
@@ -140,11 +115,6 @@
         letter-spacing: 0.1rem;
         text-align: center;
         margin: 0.75rem 0 0.75rem 0.75rem;
-      }
-
-      @media (max-width: 786px) {
-        margin: 0;
-        padding: 2rem;
       }
     }
 
@@ -157,13 +127,7 @@
       letter-spacing: 0.1rem;
       margin-right: 1rem;
 
-      @media (max-width: 768px){
-        visibility: visible;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
+
 
       &__item {
         @include itemMenu;
@@ -176,24 +140,14 @@
           padding-bottom: 1.4rem;
           border-top: 0.25rem solid $contrastColor;
 
-          @media (max-width: 768px) {
-            border: none;
-            padding: 0;
-            transform: scale(1.2);
-            color: $contrastColor;
-          }
+
         }
       }
 
       li:last-of-type {
         color: $contrastColor;
 
-        @media (max-width: 768px) {
-          border: none;
-          padding: 0;
-          transform: scale(1.2);
-          color: $contrastColor;
-        }
+
       }
     }
   }
@@ -208,8 +162,12 @@
     text-align: center;
 
     @media (max-width: 768px){
+      align-self: center;
       font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
+
+
   }
 
 
