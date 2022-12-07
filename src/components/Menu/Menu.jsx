@@ -44,21 +44,19 @@ export function Menu () {
                     <li><Link className="Menu__left__item" to='ForWho' offset={-100} smooth={true}
                               duration={500}>Schroniska</Link></li>
                     <li><Link className="Menu__left__item" to='form' smooth={true} duration={1000}>Kontakt</Link></li>
-                </ul>
-                <div className="Menu__logo">CzteryŁapy</div>
-                <ul className="Menu__right">
                     {isLogged && (
                         <>
-                        <li><a className="Menu__right__item" onClick={(event) => logoutUser(event)}>Wyloguj</a>
+                        <li><a className="Menu__left__item" onClick={(event) => logoutUser(event)}>Wyloguj</a>
                         </li>
                         </>)}
                     {!isLogged && (
                         <>
-                    <li><NavLink className="Menu__right__item" to="/login">Zaloguj</NavLink></li>
-                    <li><NavLink className="Menu__right__item" to="/registration">Rejestracja</NavLink></li>
+                    <li><NavLink className="Menu__left__item" to="/login">Zaloguj</NavLink></li>
+                    <li><NavLink className="Menu__left__item" to="/registration">Rejestracja</NavLink></li>
                         </>
                         )}
                 </ul>
+                <div className="Menu__logo">CzteryŁapy</div>
             </div>
         );
 
